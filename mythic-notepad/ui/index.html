@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mythic Notepad</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="notepad" class="notepad hidden">
+        <div class="notepad__header">
+            <div class="notepad__titles">
+                <h1 class="notepad__title">Notepad</h1>
+                <div class="notepad__meta">
+                    <span id="notepad-author" class="notepad__meta-item"></span>
+                    <span id="notepad-date" class="notepad__meta-item"></span>
+                </div>
+            </div>
+            <button id="notepad-close" class="notepad__close" aria-label="Close">×</button>
+        </div>
+        <div class="notepad__body">
+            <textarea id="notepad-input" class="notepad__input" placeholder="Write your note here..." maxlength="1000"></textarea>
+            <div id="notepad-view" class="notepad__view"></div>
+        </div>
+        <div class="notepad__footer">
+            <button id="notepad-save" class="notepad__button notepad__button--primary">Save Note</button>
+            <button id="notepad-cancel" class="notepad__button">Cancel</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

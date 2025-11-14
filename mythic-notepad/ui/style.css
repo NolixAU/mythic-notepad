@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #2c2c2c;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.notepad {
+    width: 520px;
+    max-width: 90vw;
+    background: #fefaf0;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(-20px);
+    animation: fadeIn 0.2s ease forwards;
+}
+
+.notepad__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f7d794, #f3a683);
+    color: #2c2c2c;
+}
+
+.notepad__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notepad__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.notepad__meta {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.notepad__close {
+    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    color: inherit;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.notepad__close:hover {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.notepad__body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+}
+
+.notepad__input {
+    width: 100%;
+    min-height: 260px;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    color: inherit;
+    white-space: pre-wrap;
+}
+
+.notepad__view {
+    width: 100%;
+    min-height: 260px;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    color: inherit;
+}
+
+.notepad__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.notepad__button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.12);
+    color: #2c2c2c;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.notepad__button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.notepad__button--primary {
+    background: #ff9f43;
+    color: #2c2c2c;
+}
+
+.notepad__button--primary:hover {
+    background: #ff7f11;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
